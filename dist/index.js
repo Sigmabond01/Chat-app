@@ -6,7 +6,7 @@ wss.on("connection", (socket) => {
         //@ts-ignore
         const parsedMessage = JSON.parse(message);
         if (parsedMessage.type == "join") {
-            console.log("user joined room" + parsedMessage.payload.roomId);
+            console.log("user joined room " + parsedMessage.payload.roomId);
             allSockets.push({
                 socket,
                 room: parsedMessage.payload.roomId
